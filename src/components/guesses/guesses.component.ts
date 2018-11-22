@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './guesses.component.html',
   styleUrls: ['./guesses.component.css']
 })
-export class GuessesComponent implements OnInit {
+export class GuessesComponent implements OnInit
+{
 
-  constructor() { }
+  guesses = [8, 7, 6, 5, 4, 3, 2, 1, 0];
 
-  ngOnInit() {
-  }
+  constructor(){}
+
+  ngOnInit(){}
 
 }

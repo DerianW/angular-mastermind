@@ -1,6 +1,6 @@
 <div class="wrapper box-me peg-tray flexer">
-  <div (click)="selectColor(col, i)" class="guess-peg-outer box-me circle outer-peg-{{i}}" 
-  *ngFor="let color of colors; let i = index">
+  <div (click)="selectColor(color, i)" class="guess-peg-outer box-me circle" id="outer-peg-{{i}}"
+  *ngFor="let color of ds.colors; let i = index">
     <div class="guess-peg-inner box-me circle {{color}}">
 
     </div>

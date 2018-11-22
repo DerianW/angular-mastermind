@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-.guess-peg-outer:hover, .guess-peg-inner:hover
+.guess-peg-outer:hover
 {
     border: 1px solid white;
 }

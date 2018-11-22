@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 
 
@@ -13,29 +14,22 @@ import { Component, OnInit } from '@angular/core';
 export class PegTrayComponent implements OnInit
 {
 
-  pegTray = this;
-
-  colors = ["red", "blue", "green", "yellow", "black", "brown"];
-  selectedColor = '';
-
-  constructor(){}
+  constructor(private ds: DataService){}
 
   ngOnInit(){}
 
   selectColor(col, i)
   {
 
-    console.log("boop");
-
-    this.selectedColor = col;
-
+    this.ds.selectedColor = col;
+    
     for(let j=0; j<6; j++)
     {
-      document.getElementById(`outer-peg-${j}`).style.backgroundColor = 'rgba(255, 255, 255, 1)';
+      document.getElementById(`outer-peg-${j}`).style.backgroundColor = 'rgba(255, 255, 255, 0)';
     }
 
-    let id = `outer-peg-${i}`;
-    document.getElementById(id).style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById(`outer-peg-${i}`).style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
   }
 
 }
