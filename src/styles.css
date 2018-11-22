@@ -129,17 +129,6 @@ body
   padding: 0 5%;
 }
   
-.grade-peg
-{
-  box-sizing: border-box;
-  width: 37%;
-  height: 50%;
-  border: 1px solid black;
-  margin-left: 5%;
-  border-radius: 50%;
-  background: linear-gradient(blue, #000066);
-}
-  
   /******  selection-container  ******/
 .selection-container
 {

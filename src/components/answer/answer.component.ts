@@ -21,13 +21,59 @@ export class AnswerComponent implements OnInit
 
   gradeGuess = () => {
     this.ds.showBtn = false;
-    this.ds.activeGuess++;
     this.compareArrays();
+    this.ds.activeGuess++;
     this.ds.guessArray = [-1, -1, -1, -1];
   }
 
   compareArrays = () => {
-    
+
+
+    let gradeArray = [];
+    let tempGuessArray = this.copyArray(this.ds.guessArray);
+    let tempAnswerArray = this.copyArray(this.answerArray);
+
+    this.answerArray.forEach((peg, i) => {
+
+      if (peg === tempGuessArray[i])
+      {
+        gradeArray.push('black');
+        tempGuessArray[i] = -2;
+        tempAnswerArray[i] = -1;
+      }
+
+    });
+
+    tempAnswerArray.forEach((answerPeg, i) => {
+      tempGuessArray.forEach((guessPeg, j) => {
+        if (answerPeg === guessPeg)
+        {
+          gradeArray.push('white');
+          tempAnswerArray[i] = -1;
+          tempGuessArray[i] = -2;
+        }
+      });
+    });
+
+
+    gradeArray.forEach((col, i) => {
+      document.getElementById(`gradePeg-${this.ds.activeGuess}-${i}`).style.backgroundColor = col;
+    });
+
+
   }
+
+
+
+  copyArray(oldArray)
+  {
+    let newArray = [];
+    oldArray.forEach(element => {
+      newArray.push(element);
+    });
+    return newArray;
+  }
+
+
 
 }
