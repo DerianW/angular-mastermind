@@ -9,6 +9,7 @@ import { GuessesComponent } from '../components/guesses/guesses.component';
 import { PegTrayComponent } from '../components/peg-tray/peg-tray.component';
 import { GuessComponent } from '../components/guess/guess.component';
 import { DataService } from '../services/data.service';
+import { WinnerComponent } from '../components/winner/winner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DataService } from '../services/data.service';
     AnswerComponent,
     GuessesComponent,
     PegTrayComponent,
-    GuessComponent
+    GuessComponent,
+    WinnerComponent
   ],
   imports: [
     BrowserModule,

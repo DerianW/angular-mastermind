@@ -1,5 +1,8 @@
 <div class ="wrapper box-me guesses">
+    <div class="nothing" *ngIf="ds.youWin">
+        <app-winner></app-winner>
+    </div>
 
-<app-guess *ngFor="let guess of guesses" [guess]="guess"></app-guess>
+    <app-guess *ngFor="let guess of guesses" [guess]="guess"></app-guess>
 
 </div>

@@ -16,6 +16,7 @@ export class DataService
   showBtn = false;
   colors = ["red", "purple", "green", "yellow", "black", "brown"];
   guessArray = [-1, -1, -1, -1];
+  youWin = false;
 
   constructor(){}
 
